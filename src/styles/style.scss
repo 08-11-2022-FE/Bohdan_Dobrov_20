@@ -1,0 +1,284 @@
+//connected _font.scss
+@use 'font';
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Red+Hat+Display:wght@400;500;600&display=swap');
+
+$title-color: #000000;
+$text-color: #565656;
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container__wrapper {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.link {
+    text-decoration: none;
+    position: relative;
+}
+
+.main-color {
+    color: $title-color;
+}
+
+.text-color {
+    color: $text-color;
+}
+
+.red-hat-style {
+    font-family: font.$font-red-hat;
+    @include font.font-style(48px, 64px);
+}
+
+/* header */
+.header {
+    box-sizing: border-box;
+    padding: 38px 0;
+
+    .header__text {
+        font-family: font.$font-lato, sans-serif;
+        font-weight: 400;
+        @include font.font-style(16px, 24px);
+        letter-spacing: 0.5em;
+        color: $title-color;
+        text-transform: uppercase;
+    }
+}
+
+/* main content */
+.fashion {
+    .fashion__title {
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        color: $title-color;
+        margin-bottom: 70px;
+    }
+}
+
+.image {
+    width: 100%;
+    height: auto;
+}
+
+.fashion__text {
+    max-width: 570px;
+}
+
+.text-content {
+    font-family: font.$font-lato;
+    font-weight: 400;
+    @include font.font-style(19px, 32px);
+    letter-spacing: 0.05em;
+    color: $text-color;
+}
+
+.text-title {
+    font-family: font.$font-red-hat;
+    font-weight: 600;
+    @include font.font-style(28px, 166%);
+    letter-spacing: 0.1em;
+    color: $title-color;
+}
+
+.attend-title {
+    margin-top: 90px;
+}
+
+.attend-text {
+    margin-top: 50px;
+}
+
+.attend-image {
+    margin-bottom: 50px;
+}
+
+.user__text {
+    max-width: 100%;
+
+    & .text-content:first-of-type {
+        margin: 20px 0 40px;
+    }
+}
+
+.blog__title {
+    font-weight: 400;
+    letter-spacing: 0.05em;
+}
+
+
+.text-style {
+    font-family: font.$font-lato;
+    font-weight: 400;
+    @include font.font-style(16px, 27px);
+    letter-spacing: 0.1em;
+}
+
+/* footer */
+.footer {
+    background: #F4F4F4;
+}
+
+.footer-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 70px;
+
+    .footer__tel {
+        margin: 30px 0 15px;
+        display: block;
+    }
+    
+    .footer__mail {
+        display: block;
+    }
+}
+
+.footer__social {
+    display: flex;
+    gap: 23px;
+    justify-content: space-between;
+    width: 269px;
+
+    .footer__social-item {
+        width: 50px;
+        height: 50px;
+        box-sizing: border-box;
+        border: 1px solid #565656;
+        position: relative;
+
+        &:hover {
+            background: #565656;
+        }
+
+        &:hover .size {
+            color: #FFFFFF;
+        }
+    }
+
+    .footer__link {
+        font-size: 0;
+    }
+}
+
+.size {
+    font-size: 20px;
+    color: #565656;
+    padding: 11px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.footer__copyright {
+    font-family: font.$font-lato;
+    font-weight: 400;
+    @include font.font-style(12px, 20px);
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-top: 25px;
+    padding-bottom: 30px;
+}
+
+/* media query */
+@media only screen and (max-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+    
+    .container__wrapper {
+        max-width: 700px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .header {
+        padding: 18px 0 68px;
+    }
+
+    .fashion {
+        .fashion__title {
+            margin-bottom: 50px;
+        }
+    }
+
+    .fashion__text {
+        max-width: 100%;
+    }
+
+    .footer-items {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+        padding-top: 50px;
+    }
+
+    .footer-item:first-child {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .container {
+        max-width: 320px;
+    }
+    
+    .container__wrapper {
+        max-width: 300px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .header {
+        padding: 18px 0;
+    }
+
+    .fashion {
+        .fashion__title {
+            font-size: 30px;
+            margin-bottom: 40px;
+        }
+    }
+
+    .attend-title {
+        margin-top: 70px;
+    }
+
+    .attend-text {
+        margin-top: 40px;
+    }
+
+    .attend-image {
+        margin-bottom: 40px;
+    }
+
+    .text-title {
+        font-size: 26px;
+    }
+
+    .text-content {
+        font-size: 16px;
+    }
+
+    .blog__title {
+        text-align: center;
+        @include font.font-style(32px, 42px);
+    }
+
+    .text-style {
+        @include font.font-style(18px, 166%);
+    }
+
+    .footer__copyright {
+        @include font.font-style(16px, 166%);
+    }
+}
